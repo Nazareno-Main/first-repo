@@ -1,2 +1,2 @@
 # first-repo
-my first repo - my future is bleak
+my first repo - the future is bleak

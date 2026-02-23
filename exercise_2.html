@@ -2,44 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Student List</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
-            padding: 40px;
-        }
-        .page-content {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            max-width: 600px;
-            margin: auto;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        h2 {
-            text-align: center;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            padding: 10px;
-            margin: 8px 0;
-            background: #e9f0ff;
-            border-radius: 5px;
-        }
-    </style>
+    <title>Exercise 2 - Fetch JSON</title>
 </head>
-
 <body>
 
-<div class="page-content">
-    <h2>Student List</h2>
-    <ul id="student-list"></ul>
-</div>
+    <!-- Main container for page content -->
+    <div class="page-content">
+
+        <!-- Heading for the student list -->
+        <h2>Student List</h2>
+
+        <!-- Unordered list where student data will be displayed -->
+        <ul id="student-list" class="card-body"></ul>
+    </div>
 
 <script>
     const jsonURL = "students.json"; // simple relative path
@@ -68,4 +43,5 @@
 
 </body>
 </html>
+
 

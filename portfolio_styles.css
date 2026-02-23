@@ -1,0 +1,237 @@
+/* =========================
+   GLOBAL SETTINGS
+========================= */
+* {
+    /* Global Box Sizing */
+    box-sizing: border-box;
+}
+/* Element Selector */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   HEADER STYLING
+========================= */
+/* Element Selector */
+header {
+    padding-top: 90px;
+    padding-bottom: 20px;
+
+    background-color: #f4f4f4;
+
+    text-align: center;
+}
+
+/* Descendant Selector */
+header h1 {
+    margin: 0;
+    /* Relative Font Size (em used later) */
+    font-size: 2.5em;
+}
+
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+/* Class Selector */
+.nav {
+    background-color: #000080;
+    list-style: none;
+    /* Flexbox Layout */
+    display: flex;
+    justify-content: center;
+    /* Fixed Navigation */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+}
+
+/* Descendant Selector */
+.nav li {
+    padding: 20px;
+}
+
+/* Child / Descendant Selector */
+.nav li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/* Pseudo-Class Selector */
+.nav li a:hover,
+.nav li a:focus {
+    background-color: darkcyan;
+    padding: 5px;
+}
+
+
+/* =========================
+   MAIN LAYOUT
+======================== */
+/* Class Selector */
+.container {
+    /* Flexbox Column Layout */
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+/* ID SELECTORS */
+#about {
+    background-color: #ffffff;
+}
+#education {
+    background-color: #fafafa;
+}
+#skills {
+    background-color: #ffffff;
+}
+#projects {
+    background-color: #fafafa;
+}
+#contact {
+    background-color: #ffffff;
+}
+
+
+/* =========================
+   CARDS (BOX MODEL)
+========================= */
+/* Class Selector */
+.card {
+    width: 75%;
+    /* Margin Auto for Centering */
+    margin: 20px auto;
+    /* Padding */
+    padding: 25px;
+    /* Border */
+    border: 3px solid #000080;
+    /* Box Shadow */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+/* Pseudo-Class */
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+/* Element Selector */
+figure {
+    text-align: center;
+}
+/* Descendant Selector */
+figure img {
+    width: 200px;
+    border: 5px solid #000080;
+}
+/* Element Selector */
+figcaption {
+    /* Relative Unit */
+    font-size: 0.9em;
+}
+
+
+/* =========================
+   SKILLS SECTION
+========================= */
+/* Class Selector */
+.skills-list {
+    list-style: square;
+}
+
+
+/* =========================
+   PROJECTS SECTION
+========================= */
+/* Flexbox Container */
+.project-container {
+    display: flex;
+    gap: 20px;
+}
+/* Class Selector */
+.project-card {
+    /* Flex Item */
+    flex: 1;
+    padding: 20px;
+    border: 2px solid #000080;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+/* Hover Effect */
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+/* Element Selector */
+form {
+    display: flex;
+    flex-direction: column;
+}
+/* Group Selector */
+input,
+textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #000080;
+}
+/* Focus Pseudo-Class */
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: darkcyan;
+}
+/* Button Styling */
+button {
+    padding: 10px;
+    background-color: #000080;
+    color: white;
+    border: none;
+}
+/* Hover Effect */
+button:hover {
+    background-color: darkcyan;
+}
+
+/* =========================
+   COURSES SECTION
+========================= */
+
+#courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.course-card {
+    flex: 1 1 250px;
+    padding: 15px;
+    border: 2px solid #000080;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background-color: #000080;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}

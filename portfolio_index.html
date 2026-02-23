@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- HTML5 Boilerplate Declaration -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Responsive Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- External CSS File (No Inline Styling) -->
+    <link rel="stylesheet" href="portfolio_styles.css">
+</head>
+
+<body>
+
+<!-- Semantic Header Section -->
+<header>
+    <!-- Only One H1 (Main Page Title) -->
+    <h1>Charles Archie T. Nazareno</h1>
+
+    <!-- Semantic Navigation -->
+    <nav>
+        <!-- Navigation Using Unordered List -->
+        <ul class="nav">
+            <!-- Internal Anchor Links -->
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#courses">Courses</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<!-- Main Content Container PAIN-->
+<main class="container">
+
+    <!-- ABOUT SECTION (Semantic Section) -->
+    <section id="about" class="card">
+        <h2>About Me</h2>
+		
+        <!-- Figure and Figcaption for Profile Image -->
+        <figure>
+            <img src="portfolio_profile.jpg" alt="Profile Picture">
+            <figcaption>Future IT Professional</figcaption>
+        </figure>
+
+        <!-- Professional Description -->
+        <p>
+            I am an aspiring IT student passionate about web development,
+            programming, and modern technology etc etc.
+        </p>
+    </section>
+
+
+    <!-- EDUCATION SECTION (Ordered List) -->
+    <section id="education" class="card">
+        <h2>Education</h2>
+
+        <!-- Ordered List Requirement -->
+        <ol>
+            <li>Elementary Graduate</li>
+            <li>Senior High School Graduate</li>
+            <li>BS Information Technology</li>
+        </ol>
+    </section>
+
+
+    <!-- SKILLS SECTION (Unordered List Styled with CSS) -->
+    <section id="skills" class="card">
+        <h2>Skills</h2>
+        <!-- Unordered List -->
+        <ul class="skills-list">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Java</li>
+            <li>Python</li>
+        </ul>
+    </section>
+
+
+    <!-- PROJECTS SECTION (Flexbox Layout) -->
+    <section id="projects" class="card">
+        <h2>Projects</h2>
+        <!-- Flexbox Container -->
+        <div class="project-container">
+	
+            <!-- Project Card Using Article -->
+            <article class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>
+                    Responsive personal website using HTML5 and CSS3.
+                </p>
+            </article>
+
+            <!-- Project Card -->
+            <article class="project-card">
+                <h3>Billing System</h3>
+                <p>
+                    Python-based electric billing system with GUI.
+                </p>
+            </article>
+
+            <!-- Project Card -->
+            <article class="project-card">
+                <h3>Database System</h3>
+                <p>
+                    Employee management system using SQL.
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- CONTACT SECTION (Form) -->
+    <section id="contact" class="card">
+        <h2>Contact Me</h2>
+        <!-- Functional Contact Form -->
+        <form>
+
+            <label>Name</label>
+            <input type="text" required>
+
+            <label>Email</label>
+            <input type="email" required>
+
+            <label>Message</label>
+            <textarea rows="5" required></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+
+    <!-- COURSES SECTION (Loaded from JSON) -->
+    <section id="courses" class="card">
+        <h2>My Courses</h2>
+        <!-- Container where JSON data will appear -->
+        <div id="courses-container"></div>
+    </section>
+</main>
+
+<!-- Semantic Footer aaaaaa -->
+<footer>
+    <p>© 2026 All Rights Reserved</p>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

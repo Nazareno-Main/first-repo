@@ -18,42 +18,35 @@
 
     <!-- JavaScript placed at the bottom so HTML loads first -->
     <script>
-        // URL of the students.json file hosted on GitHub Pages
-        const jsonURL = "https://Nazareno-Main.github.io/students.json";
+    // Replace with your actual GitHub Pages URL
+    const jsonURL = "https://students.json.github.io/students.json";
 
-        // Fetch the JSON file from the URL
-        fetch(jsonURL)
-            // Convert the response into JSON format
-            .then(response => response.json())
-            .then(data => {
+    fetch(jsonURL)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.json();
+        })
+        .then(data => {
+            let studentList = document.getElementById("student-list");
 
-                // Select the <ul> element where students will be listed
-                let studentList = document.getElementById("student-list");
-
-                // Check if the JSON contains a 'students' array
-                if (data.students && Array.isArray(data.students)) {
-
-                    // Loop through each student object
-                    data.students.forEach(student => {
-
-                        // Create a new list item
-                        let listItem = document.createElement("li");
-
-                        // Set the text content using template literals
-                        listItem.textContent =
-                            `${student.name} - ${student.age} (Course: ${student.course})`;
-
-                        // Add the list item to the <ul>
-                        studentList.appendChild(listItem);
-                    });
-
-                } else {
-                    // Error message if JSON format is incorrect
-                    console.error("Expected 'students' array but got:", data);
-                }
-            })
-            // Catch and display errors if fetch fails
-            .catch(error => console.error("Error fetching JSON:", error));
+            if (data.students && Array.isArray(data.students)) {
+                data.students.forEach(student => {
+                    let listItem = document.createElement("li");
+                    listItem.textContent =
+                        student.name + " - " +
+                        student.age + " (Course: " +
+                        student.course + ")";
+                    studentList.appendChild(listItem);
+                });
+            } else {
+                console.error("Invalid JSON structure:", data);
+            }
+        })
+        .catch(error => {
+            console.error("Error fetching JSON:", error);
+        });
     </script>
 
 </body>

@@ -216,7 +216,7 @@ button:hover {
 #courses-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1px;
+    gap: 10px;
 }
 
 .course-card {
@@ -236,4 +236,5 @@ footer {
     padding: 15px;
 
 }
+
 

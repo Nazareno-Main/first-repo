@@ -42,18 +42,23 @@
 </div>
 
 <script>
-    // Link to your students.json file (already in the repo)
-    const jsonURL = "students.json";
+    const jsonURL = "students.json"; // simple relative path
 
     fetch(jsonURL)
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.json();
+        })
         .then(data => {
             let studentList = document.getElementById("student-list");
 
             if (data.students && Array.isArray(data.students)) {
                 data.students.forEach(student => {
                     let li = document.createElement("li");
-                    li.textContent = `${student.name} - ${student.age} (Course: ${student.course})`;
+                    li.textContent =
+                        `${student.name} - ${student.age} (Course: ${student.course})`;
                     studentList.appendChild(li);
                 });
             }
@@ -63,3 +68,4 @@
 
 </body>
 </html>
+
